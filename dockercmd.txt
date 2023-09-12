@@ -1,0 +1,13 @@
+--> docker images
+--> docker ps
+--> docker ps -a
+--> docker rm (Container name/ID) 
+--> docker exec -it (Container name/ID) bash(respective script)
+--> docker stop (Container name/ID)
+--> docker run -d
+--> docker run -d react 3000
+--> docker run -d -p 3000:3001
+--> docker rmi
+--> docker pull (image)
+--> docker st 
+--> docker ls 
