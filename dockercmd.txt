@@ -11,3 +11,4 @@
 --> docker pull (image)
 --> docker st 
 --> docker ls 
+--> docker logs
