@@ -12,3 +12,128 @@
 --> docker st 
 --> docker ls 
 --> docker logs
+
+
+
+Docker details:
+docker --version
+docker info
+
+Download image from dockerhub:
+docker pull image-name
+docker pull hello-world  
+
+Docker authentication:
+docker login
+docker logout
+docker login -u maniprabha
+
+show images:
+docker images
+
+running docker images:
+docker run image-name
+
+Displaying container list:
+docker ps //running images
+docker ps -a //all images including exited
+
+Build Docker image from Dockerfile:
+docker build -t image-name .
+
+Running Node Image:
+docker pull node
+docker images
+docker run node  //run the image
+docker start naughty_aryabhata   //container-name or use ID
+
+can open the terminal of  node :
+docker run -it node //interactive & TTY
+can use the node.js commands
+Example:
+let a = 1;
+let b = 2;
+console.log(a + b)
+3
+
+Stop and start the container :
+docker stop container_name
+docker start container_name
+
+Running commands in container:
+docker exec -it (festive_euclid) node  //container name
+docker exec -it (festive_euclid) /bin/bash
+
+Tag container name:
+docker run --name node_image node  //can name it
+docker rename node_image sample_image
+
+Delete container:
+docker container prune  //delete all stopped containers
+
+{ Copying files to Container:
+need a base image (mini-OS)
+docker pull alpine
+docker run -it --name my-alpine-container alpine
+// terminal will open 
+# ls
+bin    etc    lib    mnt    proc   run    srv    tmp    var
+dev    home   media  opt    root   sbin   sys    usr
+do all the belows steps which is at down then try this
+# ls
+bin          home         opt          sbin         usr
+dev          lib          proc         srv          var
+etc          media        root         sys
+example.txt  mnt          run          tmp
+/ # cat example.txt
+Helloo Prabhaa!!
+
+(or)
+/var/ #cat example.txt
+Helloo Prabhaa!!
+
+on the other hand open Explorer :
+create :
+docker/workspace/dockerfiles/ --> create a file my_example.txt
+
+In new tab pf cmd prompt:
+change the path to D drive
+C:\Users\prabh> d:
+D:\> cd D:\docker_copy_file\workspace\dockerfiles
+D:\docker_copy_file\workspace\dockerfiles> dir
+
+then use the below command to copy the file to the container:
+docker cp ./my_example.txt my-alpine-container:/example.txt
+(or)
+docker cp ./my_example.txt my-alpine-container:/var/example.txt
+
+use the below command to copy the file from the container:
+docker cp my-alpine-container:/example.txt ./example_copy.txt  }
+
+Publishing Docker Images in DockerHub :
+create : 
+d/docker/workspace/dockerfile
+path == cmd --> code . //open VS Code
+create a dockerfile and type the below: 
+  FROM alpine : latest    //run the base image
+  CMD echo "Hello, DockerHub, This is prabha!" //add commands to show
+
+open terminal then run :
+docker run -t my_simple_image .
+create a repo in dockerhub  
+Example : maniprabha/my_simple_dockerimage // username/repo_name
+In command prompt :
+D:\docker_copy_file\workspace\my_simple_app>
+docker tag my_simple_image maniprabha/my-simple_dockerimage:latest //latest is a tag
+docker push maniprabha/my-simple_dockerimage:latest
+
+
+Pulling & run docker image from dockerhub: 
+//delete the image in docker desktop
+docker pull maniprabha/my-simple_dockerimage:latest
+
+Run the pulled image:
+docker run -it maniprabha/my-simple_dockerimage
+Output : Hello, DockerHub, This is prabha!
+
+
