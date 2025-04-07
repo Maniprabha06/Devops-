@@ -1,0 +1,101 @@
+git clone (url_of_repo)
+cd (to_repo)
+VS to git :
+git status -> untracked files
+git add (file name)
+git status
+git commit -m "update"  -> msg to commit
+git push origin main
+
+insert -> add ->commit ->push
+if modify file
+git add .g 
+git commit -m "update"
+git push origin main
+if deleted file
+git add (file name)
+git commit -m "deleted"
+git push origin main
+
+any modification ->add ->commit ->push
+
+GIT TO VS:
+create new file in git repo
+git pull ->show updated changes in git
+
+REPO CREATION IN EXPLORER
+cd ..
+cd (new floader name)
+to change that as git floader
+git init -> intialize emty git repo
+git status
+git add .
+git commit -m  "new update"
+create repo in git(new floader name)
+git remote add origin (link) ->while create repo it has link (blue)
+git branch -> it shows branches eg: master
+git push origin master 
+or
+git branch -M main ->change branch name
+git push origin main
+(all files will be pushed to new repo)
+
+
+BRANCHES IN GIT
+git branch -a ->listout the branches
+name : newbranch from main 
+main  branches will be cloned to newbranch
+git pull
+git branch -a
+git checkout newbranch ->switch to new branch
+new file in newbranch
+git status
+git add .
+git commit -m "new"
+git push origin newbranch
+git checkout main
+from newbranch to main branch
+git checkout main
+git diff newbranch -> to see diff
+git merge newbranch
+git push origin main
+
+
+PULL REQUEST
+git branch -a
+git branch newbranch2
+git branch -a
+git checkout newbranch2
+git branch -a
+new file
+git add .
+git commit -m "msg"
+git push origin newbranch2
+git checkout main
+to create a pull request
+pull request -> new pull request ->base: main & compare:newbranch2 -> able to merge -> write commands -> create pull request
+
+CONFLICTS:
+2 members -> try to change the same file
+create repo
+create file
+create 2 branches ->include main 3 branches
+edit the file in branch1 ->commit changes(cbe)
+edit the file in branch2 ->commit changes(TN)
+pull request
+main and branch1 ->merge
+main->cbe
+pull request
+main and branch2 -> merge
+have conflict 
+reslove conflicts->mark as resolved ->commit
+
+
+ 
+
+Flutter
+git clone (repo-link)
+Flutter clean
+flutter pub get
+flutter doctor
+flutter run -d chrome
