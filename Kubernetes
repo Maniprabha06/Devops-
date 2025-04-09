@@ -27,3 +27,15 @@ Kubernetes Master has
 Servies:
 - kubelet -> shares information with master
 - kube-proxy -> network related service, load balancing ,pod forwarding 
+
+
+Pod --> Groups container into logical units (manage all containers)
+UI --> manage through dashboards
+CLI --> kubectl --> can manage all the cluster (!Recommended)
+
+Can create kubernetes cluster using :
+- minicube
+- kubeadm
+- AWS ETS
+- google kubernetes service
+- azure kubernetes service
