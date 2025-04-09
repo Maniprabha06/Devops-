@@ -1,0 +1,29 @@
+Kubernetes --> Orchestration engine
+Orchestration means Management
+By Default it has advanced features of Docker
+Replacement of docker spam
+Written in Go programming language
+
+Features:
+- Open source and portable platform
+- Automates Scaling of Workloads
+- Groups Containers into Logical units
+- Google's Brainchild.Now donated to CNCF
+- written in Go Programming Language
+- A Container Orchestration tool
+
+Advantages:
+- Self Healing
+- Automated Rollbacks
+- Auto Scaling
+- Load Balancing
+
+Kubernetes Master has 
+- API Server  (users communicate through this API)
+- Scheduler (If one pod breakdowns search for available pod)
+- Controller Manager (cluster related tasks are controlled)
+- etcd (Key-value pair | Stores cluster,node related information)
+
+Servies:
+- kubelet -> shares information with master
+- kube-proxy -> network related service, load balancing ,pod forwarding 
