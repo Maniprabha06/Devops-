@@ -21,7 +21,7 @@ Advantages:
 Kubernetes Master has 
 - API Server  (users communicate through this API)
 - Scheduler (If one pod breakdowns search for available pod)
-- Controller Manager (cluster related tasks are controlled)
+- Controller Manager (cluster related tasks are controlled | scaling)
 - etcd (Key-value pair | Stores cluster,node related information | database)
 
 Servies: (both has to run)
