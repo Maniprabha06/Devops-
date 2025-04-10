@@ -1,7 +1,7 @@
 Kubernetes --> Orchestration engine
 Orchestration means Management
 By Default it has advanced features of Docker
-Replacement of docker spam
+Replacement of docker swarm
 Written in Go programming language
 
 Features:
@@ -22,14 +22,15 @@ Kubernetes Master has
 - API Server  (users communicate through this API)
 - Scheduler (If one pod breakdowns search for available pod)
 - Controller Manager (cluster related tasks are controlled)
-- etcd (Key-value pair | Stores cluster,node related information)
+- etcd (Key-value pair | Stores cluster,node related information | database)
 
-Servies:
-- kubelet -> shares information with master
+Servies: (both has to run)
+- kubelet -> shares information with master ,checks working of pod
 - kube-proxy -> network related service, load balancing ,pod forwarding 
 
 
 Pod --> Groups container into logical units (manage all containers)
+pod is a wrapper of container
 UI --> manage through dashboards
 CLI --> kubectl --> can manage all the cluster (!Recommended)
 
@@ -39,3 +40,11 @@ Can create kubernetes cluster using :
 - AWS ETS
 - google kubernetes service
 - azure kubernetes service
+
+Docker Swarm --> has a replication of containers
+If one breakdown then create another container & split the workloads
+
+Kubernetes is better than swarm:
+- community (wide-range)
+- Most company's prefer
+- More advantages
