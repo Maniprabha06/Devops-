@@ -1,0 +1,18 @@
+npm init -y  //to include package json
+npm install express //install express
+change the main  to app.js in package.json
+node .\app.js //to run the node file
+
+for continuous integration
+npm install jest supertest --save-dev
+node .\app.js //to run the node file
+npm test
+git status 
+git add .
+git commit -m "message"
+git push origin main
+add app.test.js file
+write - Yaml file
+commit code 
+push to main branch 
+check in actions !
