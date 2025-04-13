@@ -139,3 +139,19 @@ Output : Hello, DockerHub, This is prabha!
 docker build -t mern-backend
 docker run -p 5000:5000 mern-backend
 docker run --name mongo -d -p 27017:27017 mongo
+
+docker network create mern-network
+docker build -t mern-backend .
+docker run --name backend --network mern-network -p 5000:5000 mern-backend
+docker run -d --name mongo --network mern-network 27017:27017 mongo
+
+First mongo container then Backend container
+
+docker run --name backend --network mern-network -p 5000:5000 mern-backend
+docker build -t mern-frontend .
+docker run --name frontend -p 8000:80 mern-frontend
+
+Instead of running all this just create a docker-compose file and run the below comments
+docker-compose up
+docker-compose down //stop and remove the containers
+crtl+c //stop the containers
