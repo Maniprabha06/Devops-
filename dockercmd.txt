@@ -136,4 +136,6 @@ Run the pulled image:
 docker run -it maniprabha/my-simple_dockerimage
 Output : Hello, DockerHub, This is prabha!
 
-
+docker build -t mern-backend
+docker run -p 5000:5000 mern-backend
+docker run --name mongo -d -p 27017:27017 mongo
