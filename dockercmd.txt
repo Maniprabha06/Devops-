@@ -155,3 +155,4 @@ Instead of running all this just create a docker-compose file and run the below 
 docker-compose up
 docker-compose down //stop and remove the containers
 crtl+c //stop the containers
+quit -> q to exit
