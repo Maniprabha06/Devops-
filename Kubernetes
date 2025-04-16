@@ -50,3 +50,12 @@ Kubernetes is better than swarm:
 - More advantages
 
 Borg(Google) -> Kubernetes
+- Workload orchestrators enables treating clusters of machine as a single resource
+- These often include utilities and standard interfaces to address
+      * Efficient scheduling across instances
+      * Health checks
+      * Service Discovery
+      * Configuration Management
+      * Autoscaling
+      * Persistant storage
+      * Networking
