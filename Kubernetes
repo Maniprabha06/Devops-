@@ -59,3 +59,10 @@ Borg(Google) -> Kubernetes
       * Autoscaling
       * Persistant storage
       * Networking
+
+Control plane - System components run (Kubernetes system)
+Data plane - Has User application
+System <----> cloud
+         API
+
+
