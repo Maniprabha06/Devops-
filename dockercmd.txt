@@ -15,7 +15,7 @@
 
 
 
-Docker details:
+Docker Commands:
 docker --version
 docker info
 
