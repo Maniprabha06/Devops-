@@ -65,4 +65,8 @@ Data plane - Has User application
 System <----> cloud
          API
 
+Kubernetes standard Interfaces
+- Container Runtime Interfaces(CRI)
+- Container Storage Interfaces(CSI)
+- Container Network Interfaces(CNI)
 
