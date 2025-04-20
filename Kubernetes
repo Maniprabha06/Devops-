@@ -92,4 +92,6 @@ Container Storage Interface:
 -Secrete store CSI driver
 
 
-        
+Kubernetes used to automate the container...
+Docker--> manage it manually!
+Kubernetes ... scaling,management,deployment...
