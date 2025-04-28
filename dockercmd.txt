@@ -154,5 +154,5 @@ docker run --name frontend -p 8000:80 mern-frontend
 Instead of running all this just create a docker-compose file and run the below comments
 docker-compose up
 docker-compose down //stop and remove the containers
-crtl+c //stop the containers
+crtl+c //stop the running containers
 quit -> q to exit
