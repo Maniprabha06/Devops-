@@ -48,6 +48,7 @@ Kubernetes is better than swarm:
 - community (wide-range)
 - Most company's prefer
 - More advantages
+- Large scale application
 
 Borg(Google) -> Kubernetes
 - Workload orchestrators enables treating clusters of machine as a single resource
@@ -96,4 +97,51 @@ Kubernetes used to automate the container...
 Docker--> manage it manually!
 Kubernetes ... scaling,management,deployment...
 
+Docker -> microcomputer (container) which needs RAM,CPU etc.
+       -> it is ephimeral that is it can't create new container if it dies.
 
+Docker swarm -> Has multiple containers
+             -> If one dies it replicate another
+             -> Splits the load to control the traffic!
+
+Worker node has :
+     - kubelet
+     - kube proxy
+     - pod - wrapper of containers
+
+Pod : - has container runtime
+      - if application uses docker image then the contianer runtime is docker
+
+kube proxy : - maintaines the load
+             - get the request and decide / choose which pod to send
+
+kubelet : - communicate to the API server in control plane
+          - checks every pod and node works well
+
+
+Control plane: 
+     - kube API Server
+     - control manager
+     - Schedular
+     - etcd
+     - cloud control manager
+
+Kube API Server: - Receives request from the Kube proxy
+                 - user commands
+
+Controller manager: - if pod dies it does the scaling
+                    - Node monitoring
+                    - Job monitoring 
+                    - Ensure desire state
+
+Schedular: - tells to create pod in which node -> before that it checks the node's RAM ,CPU etc.
+           - taints and tolerance  -> Restricted node - sets key and value btw node & deployment.yaml
+           - pod affinity
+           - deployment.yaml - creates pod
+
+etcd : - database that stores all values
+       - key & value pair
+
+Cloud contol manager: - Works as a API 
+                      - to intergrate server kubernetes with the cloud providers.
+           - 
