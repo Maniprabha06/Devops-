@@ -142,9 +142,8 @@ Schedular: - tells to create pod in which node -> before that it checks the node
 etcd : - database that stores all values
        - key & value pair
 
-minikube -> to practice kubernetes in local
-cluster -> group of computers
-
 Cloud contol manager: - Works as a API 
                       - to intergrate server kubernetes with the cloud providers.
-           - 
+
+minikube -> to practice kubernetes in local
+cluster -> group of computers
